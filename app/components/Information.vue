@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio-container">
+  <div id="home" class="portfolio-container">
     <div class="background-shapes">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
@@ -13,11 +13,11 @@
       </div>
       
       <h1 class="name">Yacine Kramdi</h1>
-      <h2 class="title">Développeur Full Stack & Administrateur Base de Données</h2>
+      <h2 class="title">Ingénieur de Développement Full Stack & Administrateur Base de Données</h2>
       <p class="description">Créateur de solutions digitales innovantes alliant design et performance</p>
       
       <div class="cta-container">
-        <button class="cta-button">
+        <button class="cta-button"  @click="downloadCV">
           <span>Télécharger mon CV</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 16L12 4M12 16L8 12M12 16L16 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -27,10 +27,10 @@
       </div>
       
       <div class="social-links">
-        <a href="#" class="social-link">
+        <a href="https://www.linkedin.com/in/yacine-kramdi-642353217/" class="social-link">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="#" class="social-link">
+        <a href="https://github.com/Yacine-Kramdi/" class="social-link">
           <i class="fab fa-github"></i>
         </a>
         <a href="#" class="social-link">
@@ -246,6 +246,16 @@
 
 <script>
 export default {
-  name: 'PortfolioHeader'
+  name: 'PortfolioHeader',
+    methods: {
+    downloadCV() {
+      const link = document.createElement('a')
+      link.href = '/Yacine_Kramdi_CV.pdf'
+      link.setAttribute('download', 'Yacine-Kramdi-CV.pdf')
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    }
+  }
 }
 </script>

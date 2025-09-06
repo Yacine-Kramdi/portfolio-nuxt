@@ -1,5 +1,5 @@
 <template>
-  <section class="projects-section">
+  <section id="projets" class="projects-section">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Mes Projets</h2>
@@ -34,13 +34,11 @@
             <p class="project-description">{{ project.description }}</p>
             
             <div class="project-tech">
-              <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">Nuxt</span>
-              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag" v-for="stack in project.stacks" :key="stack">{{ stack }}</span>
             </div>
             
             <div class="project-footer">
-              <a href="#" class="project-link">
+              <a :href="project.url" class="project-link" target="_blank">
                 Voir le projet
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -59,21 +57,19 @@
 const projects = [
   { 
     id: 1, 
-    name: 'Project Alpha', 
-    description: 'Application web moderne avec Vue.js et Node.js.', 
-    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80' 
+    name: 'Mobilité Boumerdes', 
+    description: 'Développement complet de la plateforme Boumerdes Mobility, de l’implémentation technique à la mise en production. Le projet comprend un back-office pour la gestion des données, un système de workflow pour le suivi des dossiers de mobilité (enseignants, ATS, doctorants), l’intégration de la signature électronique, la génération automatique d’attestations, ainsi qu’un module de messagerie et de suggestions de contacts. L’objectif : digitaliser et simplifier l’ensemble du processus, de la demande jusqu’au remboursement en banque.', 
+    url: 'https://mobilite.univ-boumerdes.dz/',
+    image: '/images/Boumerdes.jpeg',
+    stacks: ['Php', 'Mysql', 'JavaScript', 'Sql', 'Html', 'Css', 'Uikit']
   },
   { 
     id: 2, 
-    name: 'Project Beta', 
+    name: 'Porfolio', 
     description: 'Application mobile innovante avec React Native.', 
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80' 
-  },
-  { 
-    id: 3, 
-    name: 'Project Gamma', 
-    description: 'Outil révolutionnaire utilisant IA et Machine Learning.', 
-    image: 'https://images.unsplash.com/photo-1677442135135-416f8aa26a5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80' 
+    url: 'https://portfolio-nuxt-vert.vercel.app/',
+     image: '/images/portfolio.png',
+    stacks: ['vuejs', 'nuxtjs', 'Html', 'Css', 'vercel']
   },
 ];
 </script>

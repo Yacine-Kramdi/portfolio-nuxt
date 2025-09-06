@@ -1,27 +1,24 @@
 <template>
-  <section class="formation-section">
+  <section id="formations" class="formation-section">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Mes Formation</h2>
         <p class="section-subtitle">Découvrez mes formations</p>
       </div>
-      
+
       <div class="formations-timeline">
-        <div class="formation-item" v-for="formation in formations" :key="formation.id">      
+        <div class="formation-item" v-for="formation in formations" :key="formation.id">
           <div class="formation-content">
             <div class="formation-header">
               <h3 class="formation-title">{{ formation.title }}</h3>
               <span class="formation-school">{{ formation.school }}</span>
               <span class="formation-duration">{{ formation.duration }}</span>
             </div>
-            
+
             <p class="formation-description">{{ formation.description }}</p>
-            
+
             <div class="formation-tech">
-              <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">Nuxt</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag" v-for="stack in formation.stacks" :key="stack">{{ stack }}</span>
             </div>
           </div>
         </div>
@@ -32,29 +29,33 @@
 
 <script setup>
 const formations = [
+
+
   {
-    id: 1,
-    title: "Master en Technologie de l'information",
-    school: 'Université Mhamed Bougara de Boumerdes',
-    duration: 'Oct 2021 - Juil 2023',
-    description: 'Développement d\'applications web modernes avec Vue.js et Node.js. Gestion de bases de données et mise en place d\'API RESTful.',
-    image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80'
+    id: 2,
+    title: 'Baccaluariat-Mathématique',
+    school: 'Lycée Boukabous Ahemd',
+    duration: 'Jan 2015 - Juin 2018',
+    description: 'Module sur les Mathématiques et Physique',
+    image: 'https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+      stacks: ['Mathématique','Physique']
   },
   {
     id: 2,
     title: "Licence en ingénierie des système d'information et du logiciel",
     school: 'Université Mhamed Bougara de Boumerdes',
     duration: 'Oct 2018 - Sep 2021',
-    description: 'Encadrement d\'une équipe de développeurs pour créer des applications web évolutives. Architecture technique et revue de code.',
-    image: 'https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80'
+    description: "Licence ingénierie des systèmes d'information et du logiciel, programmation orientée objet et sécurité informatique.",
+      stacks: ['Algorithm','C/C++','POO','Sql','UML']
   },
-    {
-    id: 2,
-    title: 'Baccaluariat-Mathématique',
-    school: 'Lycée Boukabous Ahemd',
-    duration: 'Jan 2015 - Juin 2018',
-    description: 'Encadrement d\'une équipe de développeurs pour créer des applications web évolutives. Architecture technique et revue de code.',
-    image: 'https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80'
+  {
+    id: 1,
+    title: "Master en Technologie de l'information",
+    school: 'Université Mhamed Bougara de Boumerdes',
+    duration: 'Oct 2021 - Juil 2023',
+    description: "Module sur la programmation fonctionnelle, le réseau informatique plus la sécurité et l'intelligence artificielle.",
+    image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
+    stacks: ['C/C++','POO','Sql','UML','Réseau','Sécurité']
   },
 ];
 </script>
@@ -67,7 +68,7 @@ const formations = [
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -98,35 +99,6 @@ const formations = [
   position: relative;
 }
 
-.formations-timeline::before {
-  content: '';
-  position: absolute;
-  left: 40px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, #6366f1, #8b5cf6);
-}
-
-.formation-item {
-  display: flex;
-  gap: 1.5rem;
-  position: relative;
-  padding-left: 50px;
-}
-
-.formation-item::before {
-  content: '';
-  position: absolute;
-  left: 32px;
-  top: 20px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #6366f1, #8b5cf6);
-  border: 3px solid #0f172a;
-  z-index: 2;
-}
 
 .formation-image {
   flex-shrink: 0;
@@ -213,16 +185,13 @@ const formations = [
   .formations-timeline::before {
     left: 20px;
   }
-  
+
   .formation-item {
     flex-direction: column;
-    padding-left: 30px;
+
   }
-  
-  .formation-item::before {
-    left: 14px;
-  }
-  
+
+ 
   .formation-header {
     flex-direction: column;
     align-items: flex-start;

@@ -1,5 +1,6 @@
 <template>
-  <div class="skills-container">
+  <div id="stacks" class="skills-container">
+   <div class="container">
     <div class="background-shapes">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
@@ -29,28 +30,35 @@
         </div>
       </div>
     </div>
+</div>
   </div>
 </template>
 
 <script setup>
 const stacks = [
   { id: 1, name: 'HTML/CSS', image: 'https://cdn-icons-png.flaticon.com/512/732/732212.png', pourcentage: 90 },
-  { id: 2, name: 'JavaScript', image: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png', pourcentage: 85 },
-  { id: 3, name: 'Vue.js/Nuxt.js', image: 'https://nuxt.com/assets/design-kit/logo/icon-green.png', pourcentage: 88 },
-  { id: 4, name: 'Node.js', image: 'https://cdn-icons-png.flaticon.com/512/919/919825.png', pourcentage: 75 },
+  { id: 2, name: 'JavaScript', image: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png', pourcentage: 60 },
+  { id: 3, name: 'Vue.js/Nuxt.js', image: '/images/nuxtjs.png', pourcentage: 60 },
+  { id: 4, name: 'Node.js', image: 'https://cdn-icons-png.flaticon.com/512/919/919825.png', pourcentage: 30 },
   { id: 5, name: 'Base de données', image: 'https://cdn-icons-png.flaticon.com/512/4299/4299956.png', pourcentage: 82 },
-  { id: 6, name: 'Docker', image: 'https://cdn-icons-png.flaticon.com/512/732/732212.png', pourcentage: 60 },
-  { id: 7, name: 'Laravel', image: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png', pourcentage: 85 },
-  { id: 8, name: 'Flutter', image: 'https://nuxt.com/assets/design-kit/logo/icon-green.png', pourcentage: 88 },
-  { id: 9, name: 'Git', image: 'https://cdn-icons-png.flaticon.com/512/919/919825.png', pourcentage: 75 },
-  { id: 10, name: 'Linux', image: 'https://cdn-icons-png.flaticon.com/512/4299/4299956.png', pourcentage: 82 },
-  { id: 9, name: 'Php', image: 'https://cdn-icons-png.flaticon.com/512/919/919825.png', pourcentage: 75 },
-  { id: 10, name: 'Python', image: 'https://cdn-icons-png.flaticon.com/512/4299/4299956.png', pourcentage: 82 },
-  { id: 10, name: 'OpenCv', image: 'https://cdn-icons-png.flaticon.com/512/4299/4299956.png', pourcentage: 82 },
+  { id: 6, name: 'Docker', image: '/images/Docker.avif', pourcentage: 75 },
+  { id: 7, name: 'Laravel', image: '/images/Laravel.png', pourcentage: 85 },
+  { id: 8, name: 'Flutter', image: '/images/flutter.jpg', pourcentage: 40 },
+  { id: 9, name: 'Git', image: '/images/git.png', pourcentage: 75 },
+  { id: 10, name: 'Linux', image: '/images/linux.jpeg', pourcentage: 70 },
+  { id: 9, name: 'Php', image: '/images/php.png', pourcentage: 80 },
+  { id: 10, name: 'Python', image: '/images/python.jpeg', pourcentage: 50 },
+  { id: 11, name: 'OpenCv', image: '/images/opencv.png', pourcentage: 30 },
+  { id: 12, name: 'Postgresql', image: '/images/Postgresql.svg', pourcentage: 80 },
+  { id: 13, name: 'Java', image: '/images/java.svg', pourcentage: 50 },
 ];
 </script>
 
 <style scoped>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .skills-container {
   min-height: 100vh;
   padding: 20px;

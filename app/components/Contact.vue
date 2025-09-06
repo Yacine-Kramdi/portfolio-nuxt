@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-section">
+  <section id="contact" class="contact-section">
     <div class="container">
       <div class="section-header">
         <h1 class="section-title">Contactez-moi</h1>
@@ -95,7 +95,7 @@
               </svg>
             </div>
             <h3>Email</h3>
-            <p>contact@yacinekramdi.com</p>
+            <p>kramdiyacine@gmail.com</p>
           </div>
           
           <div class="info-card">
@@ -105,7 +105,7 @@
               </svg>
             </div>
             <h3>Téléphone</h3>
-            <p>+213 XXX XX XX XX</p>
+            <p>+213 549 36 86 69</p>
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 

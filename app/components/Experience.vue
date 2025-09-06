@@ -1,31 +1,31 @@
 <template>
-  <section class="experiences-section">
+  <section id="experiences" class="experiences-section">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Mon Parcours Professionnel</h2>
         <p class="section-subtitle">Découvrez mes expériences et réalisations</p>
       </div>
-      
+
       <div class="experiences-timeline">
         <div class="experience-item" v-for="experience in experiences" :key="experience.id">
-          <div class="experience-image">
-            <img :src="experience.image" :alt="experience.company" />
-          </div>
-          
+
+
           <div class="experience-content">
             <div class="experience-header">
+              <div class="experience-image">
+                <img :src="experience.image" :alt="experience.company" />
+              </div>
               <h3 class="experience-title">{{ experience.title }}</h3>
               <span class="experience-company">{{ experience.company }}</span>
               <span class="experience-duration">{{ experience.duration }}</span>
             </div>
-            
-            <p class="experience-description">{{ experience.description }}</p>
-            
+
+            <p class="experience-description"
+              v-for="(point, index) in experience.description.split('- ').filter(p => p.trim())" :key="index">{{ point
+              }}</p>
+
             <div class="experience-tech">
-              <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">Nuxt</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag" v-for="stack in experience.stacks" :key="stack">{{ stack }}</span>
             </div>
           </div>
         </div>
@@ -38,19 +38,45 @@
 const experiences = [
   {
     id: 1,
-    title: 'Développeur Full Stack',
-    company: 'Company A',
-    duration: 'Jan 2020 - Dec 2020',
-    description: 'Développement d\'applications web modernes avec Vue.js et Node.js. Gestion de bases de données et mise en place d\'API RESTful.',
-    image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80'
+    title: "Full-stack Developer",
+    company: "Université M'Hamed Bougara de Boumerdes -Stage",
+    duration: 'Jan 2023 - Juil 2023',
+    description: `- Développement de back office de l'application mobilité Boumerdes pour gérer différentes données.
+- Développement de la plateforme mobilité de suivre les dossiers en ligne de stage à l'étranger pour les enseignants et les Ats plus les doctorants 'systeme de workflow ' qui facilite procédure par les responsables.
+- Système de signature électronique des documents et aussi un système qui génère des attestations et de façon automatique pour faciliter la demande de visa et aussi la récupération des frais de stage par la banque à la fin de procédure.
+- Un système de chat et aussi la suggestion des amis pour échanger des avis et rendre l'application utilisable aussi.`,
+    image: '/images/Boumerdes.jpeg',
+    stacks: ['Php', 'Mysql', 'JavaScript', 'Sql', 'Html', 'Css', 'Uikit']
   },
   {
     id: 2,
-    title: 'Lead Développeur',
-    company: 'Company B',
-    duration: 'Jan 2021 - Présent',
-    description: 'Encadrement d\'une équipe de développeurs pour créer des applications web évolutives. Architecture technique et revue de code.',
-    image: 'https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80'
+    title: 'Full-stack Developer',
+    company: 'Techitaway',
+    duration: 'Jan 2024 - Juil 2024',
+    description: `- Participation à la maintenance de projets existants tels que "Gouny" et "Recordati", des projets basés en France, ainsi que d'autres projets locaux.
+     - Résolution de divers problèmes liés au code, incluant la correction de bugs, l'optimisation des performances, et l'amélioration de la qualité du code pour assurer une meilleure stabilité et évolutivité des projets.`,
+    image: '/images/techitaway.png',
+    stacks: ['Laravel ', 'Postgresql', 'GitLab', 'Méthode agile', 'Ajax', 'Sharpoint api', 'Azure', 'Docker', 'Linux', "Travail d'équipe"]
+  },
+  {
+    id: 3,
+    title: 'Full-stack Developer',
+    company: 'ITihad.group',
+    duration: 'Sept 2025 - Août 2025',
+    description: `- Au sein d’Itihad Group, j’ai été en charge de la maintenance et de l’optimisation de plusieurs sites web ainsi que de robots de scraping.
+    - J’ai contribué à l’amélioration des performances front-end pour garantir une meilleure expérience utilisateur. 
+    - J’ai également développé des pages en AMP (Accelerated Mobile Pages) afin d’optimiser le temps de chargement sur mobile et renforcer le SEO.`,
+    image: '/images/itihad_group_logo.jpeg',
+    stacks: ['Laravel ', 'Grattage de données', 'GitLab', 'Solr', 'Méthode agile', 'Ajax', 'Python', 'Docker', 'Linux', "Travail d'équipe", 'Résolution de problèmes', 'Amp', 'SEO', 'API REST', 'Nuxtjs', 'Vuejs']
+  },
+  {
+    id: 3,
+    title: 'Ingénieur de développement et base de données ',
+    company: 'Sonatrach',
+    duration: 'Sept 2025 - Présent',
+    description: ``,
+    image: '/images/Sonatrach.svg',
+    stacks: []
   },
 ];
 </script>
@@ -63,7 +89,7 @@ const experiences = [
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -94,35 +120,14 @@ const experiences = [
   position: relative;
 }
 
-.experiences-timeline::before {
-  content: '';
-  position: absolute;
-  left: 40px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, #6366f1, #8b5cf6);
-}
 
 .experience-item {
   display: flex;
   gap: 1.5rem;
   position: relative;
-  padding-left: 40px;
+
 }
 
-.experience-item::before {
-  content: '';
-  position: absolute;
-  left: 32px;
-  top: 20px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #6366f1, #8b5cf6);
-  border: 3px solid #0f172a;
-  z-index: 2;
-}
 
 .experience-image {
   flex-shrink: 0;
@@ -209,16 +214,14 @@ const experiences = [
   .experiences-timeline::before {
     left: 20px;
   }
-  
+
   .experience-item {
     flex-direction: column;
-    padding-left: 30px;
+
   }
-  
-  .experience-item::before {
-    left: 14px;
-  }
-  
+
+  .experience-item::before {}
+
   .experience-header {
     flex-direction: column;
     align-items: flex-start;
