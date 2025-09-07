@@ -62,7 +62,7 @@ const experiences = [
     id: 3,
     title: 'Full-stack Developer',
     company: 'ITihad.group',
-    duration: 'Sept 2025 - Août 2025',
+    duration: 'Juil 2024 - Août 2025',
     description: `- Au sein d’Itihad Group, j’ai été en charge de la maintenance et de l’optimisation de plusieurs sites web ainsi que de robots de scraping.
     - J’ai contribué à l’amélioration des performances front-end pour garantir une meilleure expérience utilisateur. 
     - J’ai également développé des pages en AMP (Accelerated Mobile Pages) afin d’optimiser le temps de chargement sur mobile et renforcer le SEO.`,
