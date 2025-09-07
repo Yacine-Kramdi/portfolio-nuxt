@@ -66,7 +66,7 @@ const projects = [
   { 
     id: 2, 
     name: 'Porfolio', 
-    description: 'Application mobile innovante avec React Native.', 
+    description: 'Mon portfolio modern avec nuxt js ', 
     url: 'https://portfolio-nuxt-vert.vercel.app/',
      image: '/images/portfolio.png',
     stacks: ['vuejs', 'nuxtjs', 'Html', 'Css', 'vercel']
