@@ -78,6 +78,15 @@ const experiences = [
     image: '/images/Sonatrach.svg',
     stacks: []
   },
+    {
+    id: 4,
+    title: 'Founder & CEO',
+    company: 'Dzirya',
+    duration: 'Sept 2025 - Présent',
+    description: `Dziry est une platrofme de petites annonces en ligne,inspirée de l'idée du BonCoin, mais pensée et adaptée pour répondre aux besions de notre communauté en Algérie`,
+    image: '/images/Dzirya.png',
+    stacks: ['Laravel','Nuxtjs','Elasticsearch']
+  },
 ];
 </script>
 

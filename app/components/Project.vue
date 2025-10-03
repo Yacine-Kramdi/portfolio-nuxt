@@ -71,6 +71,14 @@ const projects = [
      image: '/images/portfolio.png',
     stacks: ['vuejs', 'nuxtjs', 'Html', 'Css', 'vercel']
   },
+    { 
+    id: 3, 
+    name: 'Dzirya', 
+    description: "Dziry est une platrofme de petites annonces en ligne,inspirée de l'idée du BonCoin, mais pensée et adaptée pour répondre aux besions de notre communauté en Algérie", 
+    url: '',
+     image: '/images/Dzirya.png',
+    stacks: ['nuxtjs', 'Laravel', 'Tailwindcss', 'Docker','Postgresql','Méthode agile','GitLab', 'Linux']
+  },
 ];
 </script>
 

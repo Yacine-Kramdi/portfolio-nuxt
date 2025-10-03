@@ -8,12 +8,12 @@
     
     <div class="profile-card">
       <div class="image-container">
-        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEHx8emaK19hg/profile-displayphoto-shrink_800_800/B4DZdHtJyVGgAc-/0/1749254709923?e=1759968000&v=beta&t=R28I2NJIjhFYq2EkwBAV2KNR6jlMTXtQeJy4Dd6L2QA" alt="Photo de Yacine Kramdi" class="profile-img">
+        <img src="/images/profile.jpeg" alt="Photo de Yacine Kramdi" class="profile-img">
         <div class="image-overlay"></div>
       </div>
       
       <h1 class="name">Yacine Kramdi</h1>
-      <h2 class="title">Ingénieur de Développement Full Stack & Administrateur Base de Données</h2>
+      <h2 class="title">Founder & CEO De Dziriya & Ingénieur de Développement Full Stack</h2>
       <p class="description">Créateur de solutions digitales innovantes alliant design et performance</p>
       
       <div class="cta-container">
