@@ -81,10 +81,10 @@ const experiences = [
     {
     id: 4,
     title: 'Founder & CEO',
-    company: 'Dzirya',
+    company: 'Dziria',
     duration: 'Sept 2025 - Présent',
-    description: `Dziry est une platrofme de petites annonces en ligne,inspirée de l'idée du BonCoin, mais pensée et adaptée pour répondre aux besions de notre communauté en Algérie`,
-    image: '/images/Dzirya.png',
+    description: "Dziria une plateforme high-tech d’achat et de vente en Algérie Offrir un espace simple et intuitif pour acheter, vendre et échanger. des produits neufs et d'occasion entre particuliers et professionnels.", 
+    image: '/images/Dziria.png',
     stacks: ['Laravel','Nuxtjs','Elasticsearch']
   },
 ];

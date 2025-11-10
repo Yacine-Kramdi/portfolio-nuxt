@@ -73,10 +73,10 @@ const projects = [
   },
     { 
     id: 3, 
-    name: 'Dzirya', 
-    description: "Dziry est une platrofme de petites annonces en ligne,inspirée de l'idée du BonCoin, mais pensée et adaptée pour répondre aux besions de notre communauté en Algérie", 
-    url: '',
-     image: '/images/Dzirya.png',
+    name: 'Dziria', 
+    description: "Dziria une plateforme high-tech d’achat et de vente en Algérie Offrir un espace simple et intuitif pour acheter, vendre et échanger. des produits neufs et d'occasion entre particuliers et professionnels.", 
+    url: 'https://www.dziria.shop',
+     image: '/images/Dziria.png',
     stacks: ['nuxtjs', 'Laravel', 'Tailwindcss', 'Docker','Postgresql','Méthode agile','GitLab', 'Linux']
   },
 ];
