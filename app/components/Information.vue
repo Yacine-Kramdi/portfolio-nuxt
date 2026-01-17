@@ -13,7 +13,7 @@
       </div>
       
       <h1 class="name">Yacine Kramdi</h1>
-      <h2 class="title">Founder & CEO De Dziriya & Ingénieur de Développement Full Stack</h2>
+      <h2 class="title">CEO & Fondateur – Dziria | Ingénieur de Développements Full Stack</h2>
       <p class="description">Créateur de solutions digitales innovantes alliant design et performance</p>
       
       <div class="cta-container">

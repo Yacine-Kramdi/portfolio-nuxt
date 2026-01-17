@@ -71,12 +71,12 @@ const experiences = [
   },
   {
     id: 3,
-    title: 'Ingénieur de développement et base de données ',
+    title: "Ingénieur d'etudes et développement",
     company: 'Sonatrach',
     duration: 'Sept 2025 - Présent',
     description: ``,
     image: '/images/Sonatrach.svg',
-    stacks: []
+    stacks: ['Oracle DB', 'Python', 'Django', 'Flask', 'API REST', 'travail d\'équipe', "Méthode agile", 'Communication']
   },
     {
     id: 4,
@@ -85,7 +85,7 @@ const experiences = [
     duration: 'Sept 2025 - Présent',
     description: "Dziria une plateforme high-tech d’achat et de vente en Algérie Offrir un espace simple et intuitif pour acheter, vendre et échanger. des produits neufs et d'occasion entre particuliers et professionnels.", 
     image: '/images/Dziria.png',
-    stacks: ['Laravel','Nuxtjs','Elasticsearch']
+    stacks: ['Laravel','Nuxtjs','Elasticsearch', 'Postgresql', 'Docker', 'AWS', 'GitHub', 'Travail d\'équipe', 'Gestion de projet', 'Communication']
   },
 ];
 </script>
